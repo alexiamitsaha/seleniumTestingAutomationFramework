@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.testng.Assert;
 import com.herokuapp.seleniumTestingAutomationFramework.pages.AbTestingPage;
 import com.herokuapp.seleniumTestingAutomationFramework.utilities.Data;
-//import com.herokuapp.seleniumTestingAutomationFramework.basicClasses.TheInternet;
-//import org.openqa.selenium.support.ui.Sleeper;
 
 public class AbTestingClass extends BasicClass {
     @Test
@@ -20,7 +18,7 @@ public class AbTestingClass extends BasicClass {
         System.out.println("Given" +baseLink);
         Assert.assertEquals(baseLink, Data.BASEURL);
         System.out.println("Home URL is Validate");
-        sleepTest(2000);
+        //sleepTest(2000);
 
         //TestCase 02 : Header Validation
         if (TI.getAbTesting().isDisplayed())

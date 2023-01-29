@@ -10,13 +10,16 @@ public class AbTestingPage extends BasicPage {
     //Extend BasePages from inherit this function
     public AbTestingPage(WebDriver driver)
     {
+
         super(driver);
     }
+
     //http://the-internet.herokuapp.com/abtest
     @FindBy(xpath="//div[@id='content']//h3[.='A/B Test Variation 1']")
     public WebElement AbTestingPagesVariation1;
 
     public WebElement getAbTestingPagesVariation1(){
+
         return AbTestingPagesVariation1;
     }
     //public static final String Amit = "dhaka";
@@ -26,6 +29,7 @@ public class AbTestingPage extends BasicPage {
     public WebElement AbTestControl;
 
     public WebElement getAbTestControl() {
+
         return AbTestControl;
     }
 

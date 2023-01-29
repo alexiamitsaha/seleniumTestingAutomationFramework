@@ -3,7 +3,6 @@ package com.herokuapp.seleniumTestingAutomationFramework.basicClasses;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.junit.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -31,7 +30,7 @@ public class BasicClass {
         public void beforeMethod() {
             Driver.navigate().to("http://the-internet.herokuapp.com/");
             //driver.navigate().to("https://www.facebook.com/");
-            //sleepTest (2000);
+            sleepTest (2000);
         }
 
         @AfterMethod

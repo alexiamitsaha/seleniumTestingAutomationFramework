@@ -5,7 +5,7 @@ public class Data {
     //
     public static final String PHONE_NUMBER = "01942520503";
     public static final String NEGATIVE_ERROR_MASSAGE = "Not visible";
-    public static final String POSETIVE_MASSAGE = "Visible-";
+    public static final String POSETIVE_MASSAGE = "Visible";
     public static final String CREATE_NEW_ACCOUNT = "Create New Account";
 
     //BaseURL
