@@ -15,11 +15,11 @@ public class AddRemoveElementsClass extends BasicClass {
     @Test
     public void addRemoveElements(){
 
-        TheInternet TI = new TheInternet(Driver);
-        Add_Remove_Elements_Pages ARE =new Add_Remove_Elements_Pages(Driver);
+        TheInternet TI = new TheInternet(driver);
+        Add_Remove_Elements_Pages ARE =new Add_Remove_Elements_Pages(driver);
 
         //TestClass 01:Validation form Home URL
-        String baseLink = Driver.getCurrentUrl();
+        String baseLink = driver.getCurrentUrl();
         System.out.println("Given" +baseLink);
         Assert.assertEquals(baseLink, Data.BASEURL);
         System.out.println("Home URL is Vaild");
@@ -29,7 +29,7 @@ public class AddRemoveElementsClass extends BasicClass {
         sleepTest(2000);
         if (TI.getAddRemoveElements().isDisplayed()){
             String addRemoveElementsText =TI.getAddRemoveElements().getText();
-            Assert.assertEquals(true,addRemoveElementsText);
+            Assert.assertEquals("Add/Remove Elements",addRemoveElementsText);
         }
         else {
             System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
@@ -37,7 +37,7 @@ public class AddRemoveElementsClass extends BasicClass {
         TI.getAddRemoveElements().click();
 
         //Testcase 03: Corresponding Page URL Validation
-        String baselink = Driver.getCurrentUrl();
+        String baselink = driver.getCurrentUrl();
         System.out.println("Given"+baselink);
         Assert.assertEquals(baselink,Data.BASEURL+Data.ADD_REMOVE_ELEMENTS_LINK);
         System.out.println("TestLink is Validate");
@@ -66,7 +66,7 @@ public class AddRemoveElementsClass extends BasicClass {
         ARE.getdelete2().click();
 
         sleepTest(2000);
-        Driver.navigate().back();
+        driver.navigate().back();
 
         sleepTest(2000);
 

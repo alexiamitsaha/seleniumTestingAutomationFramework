@@ -2,19 +2,19 @@ package com.herokuapp.seleniumTestingAutomationFramework.testCases;
 
 import com.herokuapp.seleniumTestingAutomationFramework.basicClasses.BasicClass;
 import com.herokuapp.seleniumTestingAutomationFramework.basicClasses.TheInternet;
-import org.junit.Test;
 import org.testng.Assert;
 import com.herokuapp.seleniumTestingAutomationFramework.pages.AbTestingPage;
 import com.herokuapp.seleniumTestingAutomationFramework.utilities.Data;
+import org.testng.annotations.Test;
 
 public class AbTestingClass extends BasicClass {
     @Test
     public void ABTesting(){
-        TheInternet TI = new TheInternet(Driver); //using this class in java we have to create new instance
-        AbTestingPage ABT = new AbTestingPage(Driver);
+        TheInternet TI = new TheInternet(driver); //using this class in java we have to create new instance
+        AbTestingPage ABT = new AbTestingPage(driver);
         
         //TestCase 01 : Home URl Validation
-        String baseLink = Driver.getCurrentUrl();
+        String baseLink = driver.getCurrentUrl();
         System.out.println("Given" +baseLink);
         Assert.assertEquals(baseLink, Data.BASEURL);
         System.out.println("Home URL is Validate");
@@ -34,7 +34,7 @@ public class AbTestingClass extends BasicClass {
 
         //Testcase 03: Corresponding page URL Validation
 
-        String link = Driver.getCurrentUrl();
+        String link = driver.getCurrentUrl();
         System.out.println("Given "+link);
         Assert.assertEquals(link, Data.BASEURL+Data.AB_Test_LINK);
         System.out.println("Link is Validate");
@@ -56,7 +56,7 @@ public class AbTestingClass extends BasicClass {
         }
 
         sleepTest(2000);
-        Driver.navigate().back();
+        driver.navigate().back();
         sleepTest(5000);
 
     }
