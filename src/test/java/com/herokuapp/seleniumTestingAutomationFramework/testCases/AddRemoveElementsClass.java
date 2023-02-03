@@ -6,20 +6,18 @@ import com.herokuapp.seleniumTestingAutomationFramework.pages.Add_Remove_Element
 import com.herokuapp.seleniumTestingAutomationFramework.utilities.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-//import sun.jvm.hotspot.debugger.cdbg.BaseClass;
-
-import java.sql.Driver;
+//import java.sql.driver;
 
 public class AddRemoveElementsClass extends BasicClass {
 
     @Test
     public void addRemoveElements(){
 
-        TheInternet TI = new TheInternet(Driver);
-        Add_Remove_Elements_Pages ARE =new Add_Remove_Elements_Pages(Driver);
+        TheInternet ti = new TheInternet(driver);
+        Add_Remove_Elements_Pages are =new Add_Remove_Elements_Pages(driver);
 
         //TestClass 01:Validation form Home URL
-        String baseLink = Driver.getCurrentUrl();
+        String baseLink = driver.getCurrentUrl();
         System.out.println("Given" +baseLink);
         Assert.assertEquals(baseLink, Data.BASEURL);
         System.out.println("Home URL is Vaild");
@@ -27,17 +25,17 @@ public class AddRemoveElementsClass extends BasicClass {
 
         //TestClass 02: page Header Validation
         sleepTest(2000);
-        if (TI.getAddRemoveElements().isDisplayed()){
-            String addRemoveElementsText =TI.getAddRemoveElements().getText();
+        if (ti.getAddRemoveElements().isDisplayed()){
+            String addRemoveElementsText =ti.getAddRemoveElements().getText();
             Assert.assertEquals(true,addRemoveElementsText);
         }
         else {
             System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
         }
-        TI.getAddRemoveElements().click();
+        ti.getAddRemoveElements().click();
 
         //Testcase 03: Corresponding Page URL Validation
-        String baselink = Driver.getCurrentUrl();
+        String baselink = driver.getCurrentUrl();
         System.out.println("Given"+baselink);
         Assert.assertEquals(baselink,Data.BASEURL+Data.ADD_REMOVE_ELEMENTS_LINK);
         System.out.println("TestLink is Validate");
@@ -45,8 +43,8 @@ public class AddRemoveElementsClass extends BasicClass {
 
         //Testcase 04: header validation
         sleepTest(2000);
-        if (ARE.getAddRemoveElementsHeader().isDisplayed()){
-            String addRmvHeader= ARE.getAddRemoveElementsHeader().getText();
+        if (are.getAddRemoveElementsHeader().isDisplayed()){
+            String addRmvHeader= are.getAddRemoveElementsHeader().getText();
             Assert.assertTrue(true,addRmvHeader);
         }
         else {
@@ -54,19 +52,19 @@ public class AddRemoveElementsClass extends BasicClass {
         }
 
         sleepTest(2000);
-        ARE.getAddElement().click();
+        are.getAddElement().click();
 
         sleepTest(2000);
-        ARE.getAddElement().click();
+        are.getAddElement().click();
 
         sleepTest(2000);
-        ARE.getDelete1().click();
+        are.getDelete1().click();
 
         sleepTest(2000);
-        ARE.getdelete2().click();
+        are.getdelete2().click();
 
         sleepTest(2000);
-        Driver.navigate().back();
+        driver.navigate().back();
 
         sleepTest(2000);
 

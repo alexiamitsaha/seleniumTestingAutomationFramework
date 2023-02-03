@@ -49,11 +49,11 @@ public class Data {
     //FILE DOWNLOAD
     public static final String  DOWNLOAD_LINK = "download";
 
-    public static final String  DOWNLOAD_FILE_PATH = "C:\\Users\\Talha\\Downloads\\";
+    public static final String  DOWNLOAD_FILE_PATH = "C:\\Users\\Amit\\Downloads";
 
     //File Upload
     public static final String  FILE_UPLOAD_URL = "https://the-internet.herokuapp.com/upload";
-    public static final String  FILE_UPLOAD_PATH = "G:\\Talha\\SQA\\maven project.txt";
+    public static final String  FILE_UPLOAD_PATH = "D:\\Automation Projects\\Maven_Projects.txt";
     public static final String  UPLOAD_LINK = "upload";
 
     //File Upload Corresponding Page
@@ -62,7 +62,7 @@ public class Data {
     //Forgot Password
     public static final String   FORGOT_PASSWORD_LINK = "forgot_password";
     public static final String   FORGOT_PASSWORD_HEADER = "Forgot Password";
-    public static final String   FORGOT_PASSWORD_PAGE_EMAIL =  "talhabinashraf@gmail.com";
+    public static final String   FORGOT_PASSWORD_PAGE_EMAIL =  "alexiamitsaha@gmail.com";
 
     //Form Authentication
     public static final String   FORM_AUTHENTICATION_LINK = "login";
